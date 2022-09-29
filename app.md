@@ -1,0 +1,6 @@
+- Magnet
+- LogiTune
+- ShurePlus MOTIV
+- LuxaforMuteButton
+- RunCat
+- Contrast

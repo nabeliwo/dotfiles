@@ -34,9 +34,23 @@ brew "imagemagick"
 
 cask "iterm2"
 cask "visual-studio-code"
+cask "docker"
+cask "figma"
+cask "microsoft-remote-desktop"
+cask "miro"
 
 cask "google-chrome"
 cask "microsoft-edge"
 
+cask "slack"
+cask "discord"
+cask "zoom"
+
 cask "alfred"
 cask "1password"
+cask "choosy"
+cask "clipy"
+cask "obsidian"
+cask "kap"
+cask "karabiner-elements"
+cask "krisp"

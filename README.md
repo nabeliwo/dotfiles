@@ -20,3 +20,7 @@
 
 1. 以下のリポジトリから `getafe.itemcolors` をダウンロードして iterm2 の profile の color に設定する
    1. https://github.com/larssmit/iterm2-getafe
+
+## brew cask でインストールできないアプリのインストール
+
+`app.md` の中身を見てインストールする
