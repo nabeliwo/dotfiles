@@ -1,0 +1,17 @@
+[core]
+        excludesfile = ~/.gitignore_global
+        editor = vim
+        ignorecase = false
+[user]
+        name = nabeliwo
+        email = hiroki.c.watanabe@gmail.com
+[alias]
+        sw = switch
+        st = status
+        br = branch
+        cm = commit
+        df = diff
+        gr = grep
+        cp = cherry-pick
+[ghq]
+	root = ~/dev
