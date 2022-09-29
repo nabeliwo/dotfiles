@@ -12,8 +12,8 @@ else
     echo "$THIS_DIR already downloaded. Updating..."
     cd "$THIS_DIR"
     git stash
-    git checkout master
-    git pull origin master
+    git checkout main
+    git pull origin main
     echo
 fi
 
@@ -34,7 +34,7 @@ done
 # install homebrew
 if ! command -v brew > /dev/null 2>&1; then
     # Install homebrew: https://brew.sh/
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     echo
 fi
 brew bundle

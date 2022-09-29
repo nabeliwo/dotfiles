@@ -39,3 +39,4 @@ cask "google-chrome"
 cask "microsoft-edge"
 
 cask "alfred"
+cask "1password"
