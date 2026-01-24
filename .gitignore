@@ -1,0 +1,9 @@
+# secrets (never commit)
+.config/zsh/80-secrets.zsh
+
+# chezmoi temp / cache
+*.tmp
+*.bak
+
+# OS junk
+.DS_Store

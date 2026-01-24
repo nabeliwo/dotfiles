@@ -1,0 +1,4 @@
+# ~/.zshrc
+for f in ~/.config/zsh/*.zsh; do
+  [[ -r "$f" ]] && source "$f"
+done
