@@ -1,4 +1,5 @@
 add_newline = false
+command_timeout = 2000
 
 format = """
 [](fg:#7aa2f7)\
@@ -57,7 +58,7 @@ behind = '⇣${count}'
 diverged = '⇕'
 up_to_date = '✓'
 untracked = '?'
-stashed = '$$'
+stashed = '\$'
 modified = '!${count}'
 renamed = '»'
 deleted = '✘'
