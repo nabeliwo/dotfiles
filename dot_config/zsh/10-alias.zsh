@@ -6,6 +6,7 @@ alias la='ls -laGh'
 
 # --- git ---
 alias g='git'
+alias lg='lazygit'
 
 # --- ruby/bundler ---
 alias be='bundle exec'
