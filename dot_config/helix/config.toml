@@ -1,1 +1,8 @@
 theme = "modus_vivendi_tinted"
+
+[editor]
+soft-wrap.enable = true
+whitespace.render = "all"
+
+[editor.file-picker]
+hidden = false
