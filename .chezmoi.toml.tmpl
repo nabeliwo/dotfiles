@@ -1,0 +1,26 @@
+{{- $homebrew_prefix := "" -}}
+{{- $pnpm_home := "" -}}
+{{- $browser := "" -}}
+
+{{- if eq .chezmoi.os "darwin" -}}
+  {{- if eq .chezmoi.arch "arm64" -}}
+    {{- $homebrew_prefix = "/opt/homebrew" -}}
+  {{- else -}}
+    {{- $homebrew_prefix = "/usr/local" -}}
+  {{- end -}}
+  {{- $pnpm_home = joinPath .chezmoi.homeDir "Library" "pnpm" -}}
+  {{- $browser = "open" -}}
+{{- else if eq .chezmoi.os "linux" -}}
+  {{- $homebrew_prefix = "/home/linuxbrew/.linuxbrew" -}}
+  {{- $pnpm_home = joinPath .chezmoi.homeDir ".local" "share" "pnpm" -}}
+  {{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+    {{- $browser = "wslview" -}}
+  {{- else -}}
+    {{- $browser = "xdg-open" -}}
+  {{- end -}}
+{{- end -}}
+
+[data]
+  homebrew_prefix = {{ $homebrew_prefix | quote }}
+  pnpm_home = {{ $pnpm_home | quote }}
+  browser = {{ $browser | quote }}

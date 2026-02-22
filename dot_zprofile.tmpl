@@ -1,0 +1,10 @@
+# Homebrew
+if [[ -x {{ .homebrew_prefix }}/bin/brew ]]; then
+  eval "$({{ .homebrew_prefix }}/bin/brew shellenv)"
+fi
+
+# Editor / Browser
+export EDITOR=${EDITOR:-vim}
+export VISUAL=${VISUAL:-vim}
+export PAGER=${PAGER:-less}
+export BROWSER=${BROWSER:-{{ .browser }}}

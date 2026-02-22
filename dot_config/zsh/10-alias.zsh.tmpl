@@ -1,8 +1,13 @@
 # Aliases
 
-# --- ls shortcuts (macOS/BSD-friendly) ---
+# --- ls shortcuts (OS-specific) ---
+{{- if eq .chezmoi.os "darwin" }}
 alias ll='ls -lGh'
 alias la='ls -laGh'
+{{- else }}
+alias ll='ls -lh --color=auto'
+alias la='ls -lah --color=auto'
+{{- end }}
 
 # --- git ---
 alias g='git'
@@ -16,10 +21,17 @@ repo() {
   local root repo
   root="$(ghq root)" || return
 
+{{- if eq .chezmoi.os "darwin" }}
   repo="$(ghq list | fzf \
     --prompt='ghq> ' \
     --height=40% --reverse \
     --preview="ls -1 '${root}/{}' 2>/dev/null | sed -n '1,200p'")" || return
+{{- else }}
+  repo="$(ghq list | fzf \
+    --prompt='ghq> ' \
+    --height=40% --reverse \
+    --preview="ls -1 --color=auto '${root}/{}' 2>/dev/null | sed -n '1,200p'")" || return
+{{- end }}
 
   cd "${root}/${repo}" || return
 
