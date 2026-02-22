@@ -86,6 +86,26 @@ Install these fonts on Windows for proper terminal display:
 
 Configure Windows Terminal to use these fonts in its settings.
 
+## Required Tools
+
+After applying dotfiles, install the required tools via Homebrew:
+
+```bash
+# Essential tools
+brew install fzf       # Fuzzy finder for command history and file search
+brew install starship  # Shell prompt
+brew install zoxide    # Smart directory navigation
+brew install mise      # Runtime version manager
+brew install ghq       # Repository management
+brew install lazygit   # Git TUI
+
+# Optional: Node.js and package managers
+brew install node
+npm install -g pnpm
+```
+
+**Note**: The dotfiles are designed to work even if some tools are not installed. Missing tools will simply be skipped without causing errors. However, for the best experience, install all the tools listed above.
+
 ## Platform-specific notes
 
 ### Differences handled automatically
