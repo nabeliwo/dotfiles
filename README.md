@@ -107,9 +107,10 @@ brew install mise      # Runtime version manager
 brew install ghq       # Repository management
 brew install lazygit   # Git TUI
 
-# Optional: Node.js and package managers
-brew install node
-npm install -g pnpm
+# Optional: Node.js and pnpm
+# Install Node.js via mise (after mise is installed)
+mise use -g node@latest    # Install and set global Node.js version
+npm install -g pnpm         # Install pnpm package manager
 ```
 
 **Note**: The dotfiles are designed to work even if some tools are not installed. Missing tools will simply be skipped without causing errors. However, for the best experience, install all the tools listed above.
