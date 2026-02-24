@@ -106,6 +106,7 @@ brew install zoxide    # Smart directory navigation
 brew install mise      # Runtime version manager
 brew install ghq       # Repository management
 brew install lazygit   # Git TUI
+brew install zellij    # Terminal multiplexer
 
 # Optional: Node.js and pnpm
 # Install Node.js via mise (after mise is installed)
