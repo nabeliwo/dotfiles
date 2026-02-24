@@ -1,0 +1,12 @@
+# ~/.zshrc
+{{- if eq .chezmoi.os "linux" }}
+{{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+# WSL 起動時に Windows ディレクトリ (/mnt/*) にいる場合は自動的にホームに移動
+if [[ "$PWD" == /mnt/* ]]; then
+  cd ~
+fi
+{{- end }}
+{{- end }}
+for f in ~/.config/zsh/*.zsh; do
+  [[ -r "$f" ]] && source "$f"
+done
