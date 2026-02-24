@@ -107,6 +107,7 @@ brew install mise      # Runtime version manager
 brew install ghq       # Repository management
 brew install lazygit   # Git TUI
 brew install zellij    # Terminal multiplexer
+brew install helix     # Modern modal text editor
 
 # Optional: Node.js and pnpm
 # Install Node.js via mise (after mise is installed)
