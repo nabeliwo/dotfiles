@@ -88,7 +88,15 @@ Configure Windows Terminal to use these fonts in its settings.
 
 ## Required Tools
 
-After applying dotfiles, install the required tools via Homebrew:
+### 1. Install zinit (zsh plugin manager)
+
+```bash
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+```
+
+After installation, restart your shell or run `exec zsh` to reload.
+
+### 2. Install other tools via Homebrew
 
 ```bash
 # Essential tools
