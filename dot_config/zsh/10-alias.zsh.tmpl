@@ -19,6 +19,15 @@ alias zj='zellij'
 # --- ruby/bundler ---
 alias be='bundle exec'
 
+# --- yazi shell wrapper ---
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
+}
+
 # --- ghq + zoxide + fzf (repo selection) ---
 repo() {
   local root repo
