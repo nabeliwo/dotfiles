@@ -8,6 +8,7 @@ local modules = {
   require 'input',
   require 'fonts',
   require 'keybinds',
+  require 'platform',
 }
 
 -- config をマージ
