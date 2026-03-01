@@ -1,4 +1,10 @@
 # ~/.zshrc
+
+# mise (インタラクティブシェルでのみ有効化)
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
+
 for f in ~/.config/zsh/*.zsh; do
   [[ -r "$f" ]] && source "$f"
 done
