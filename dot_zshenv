@@ -1,3 +1,4 @@
 export LANG=en_US.UTF-8
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+[[ -f "$HOME/.vite-plus/env" ]] && . "$HOME/.vite-plus/env"
