@@ -1,5 +1,5 @@
 # secrets (never commit)
-.config/zsh/80-secrets.zsh
+dot_config/zsh/80-secrets.zsh
 
 # chezmoi temp / cache
 *.tmp

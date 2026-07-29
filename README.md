@@ -113,6 +113,9 @@ brew install helix     # Modern modal text editor
 # Install Node.js via mise (after mise is installed)
 mise use -g node@latest    # Install and set global Node.js version
 npm install -g pnpm         # Install pnpm package manager
+
+# Optional: safe-chain (wraps npm/yarn/pnpm/pip etc. to detect known malware packages)
+npm install -g @aikidosec/safe-chain
 ```
 
 **Note**: The dotfiles are designed to work even if some tools are not installed. Missing tools will simply be skipped without causing errors. However, for the best experience, install all the tools listed above.
