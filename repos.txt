@@ -12,8 +12,4 @@ kufu/smarthr-ui
 kufu/tamatebako
 kufu/tatami
 kufu/techblog
-nabeliwo/checkbox-life-game
 nabeliwo/hub
-nabeliwo/react-checkbox-life-game
-nabeliwo/slides
-nabeliwo/zenn-content
