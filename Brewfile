@@ -44,8 +44,6 @@ brew "docker-credential-helper"
 brew "fd"
 # Framework for layout and rendering of i18n text
 brew "pango"
-# Play, record, convert, and stream many audio and video codecs
-brew "ffmpeg-full"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -60,8 +58,6 @@ brew "gnupg"
 brew "grep"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
-# GNU Ubiquitous Intelligent Language for Extensions
-brew "guile"
 # Post-modern modal text editor
 brew "helix"
 # Agent multiplexer that lives in your terminal
@@ -74,32 +70,18 @@ brew "libheif"
 brew "imagemagick"
 # Library to render SVG files using Cairo
 brew "librsvg"
-# Tools and libraries to manipulate images in many formats
-brew "imagemagick-full"
-# Image manipulation library
-brew "jpeg"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Postgres C API library
-brew "libpq"
 # YAML Parser
 brew "libyaml"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
-brew "nginx"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
-# Object-relational database system
-brew "postgresql@14"
-# SVG rendering tool and library
-brew "resvg"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # 7-Zip is a file archiver with a high compression ratio
@@ -114,8 +96,6 @@ brew "tflint"
 brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
-# Image processing library
-brew "vips"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Pluggable terminal workspace, with terminal multiplexer as the base feature
@@ -126,16 +106,12 @@ brew "zoxide"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
-# Application launcher and productivity software
-cask "alfred"
 # Open links in any browser
 cask "choosy"
 # Virtual monitor for screen sharing
 cask "deskpad"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerised applications and microservices
-cask "docker-desktop"
 # Collaborative team software
 cask "figma"
 cask "font-biz-udgothic"
@@ -145,8 +121,6 @@ cask "font-noto-sans-mono-cjk-jp"
 cask "font-symbols-only-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
 # Open-source screen recorder built with web technology
 cask "kap"
 # Keyboard customiser
