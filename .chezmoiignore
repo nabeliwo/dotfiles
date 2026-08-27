@@ -1,2 +1,9 @@
 README.md
 .config/zsh/80-secrets.zsh
+
+{{- /* macOS 専用ファイルは darwin 以外（WSL/Linux）では適用しない */}}
+{{ if ne .chezmoi.os "darwin" }}
+Brewfile
+repos.txt
+.config/karabiner
+{{ end -}}
