@@ -117,8 +117,6 @@ cask "karabiner-elements"
 cask "krisp"
 # Multi-platform web browser
 cask "microsoft-edge"
-# Remote desktop client
-cask "microsoft-remote-desktop"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
