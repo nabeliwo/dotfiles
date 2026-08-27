@@ -1,27 +1,9 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
-# Library and utilities for processing GIFs
-brew "giflib"
-# Library for manipulating PNG images
-brew "libpng"
-# Core application library for C
-brew "glib"
-# Low-level library for pixel manipulation
-brew "pixman"
-# Vector graphics library with cross-device output support
-brew "cairo"
-# GNU multiple precision arithmetic library
-brew "gmp"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# International domain name library (IDNA2008, Punycode and TR46)
-brew "libidn2"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # Official command-line tool for CircleCI
@@ -38,8 +20,6 @@ brew "docker-compose"
 brew "docker-credential-helper"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Framework for layout and rendering of i18n text
-brew "pango"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -52,20 +32,10 @@ brew "git"
 brew "gnupg"
 # GNU grep, egrep and fgrep
 brew "grep"
-# Package compiler and linker metadata toolkit
-brew "pkgconf"
 # Post-modern modal text editor
 brew "helix"
 # Agent multiplexer that lives in your terminal
 brew "herdr"
-# Database of common MIME types
-brew "shared-mime-info"
-# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
-brew "libheif"
-# Tools and libraries to manipulate images in select formats
-brew "imagemagick"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
@@ -76,8 +46,6 @@ brew "libyaml"
 brew "mise"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Cross-shell prompt for astronauts
@@ -113,19 +81,8 @@ cask "ghostty"
 cask "kap"
 # Keyboard customiser
 cask "karabiner-elements"
-# Noise cancelling application
-cask "krisp"
-# Multi-platform web browser
-cask "microsoft-edge"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm@nightly"
-npm "@kufu/qa-metrics-skills"
-npm "@openai/codex"
-npm "corepack"
-npm "typescript-language-server"
-npm "typescript"
 
 # Code editor
 cask "zed"
