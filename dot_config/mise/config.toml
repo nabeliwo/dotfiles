@@ -1,0 +1,12 @@
+[tools]
+node = "20"
+ruby = "3"
+bun = "latest"
+deno = "latest"
+terraform = "1.9.5"
+
+[settings]
+idiomatic_version_file_enable_tools = ["ruby", "node"]
+
+[settings.node]
+gpg_verify = true
