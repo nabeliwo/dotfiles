@@ -22,10 +22,6 @@ brew "libidn2"
 brew "unbound"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
-# GNU Emacs text editor
-brew "emacs"
-# Emacs dependency management
-brew "cask"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # Official command-line tool for CircleCI
@@ -84,8 +80,6 @@ brew "mkcert"
 brew "poppler"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# 7-Zip is a file archiver with a high compression ratio
-brew "sevenzip"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Send macOS User Notifications from the command-line
@@ -96,18 +90,12 @@ brew "tflint"
 brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
-# Blazing fast terminal file manager written in Rust, based on async I/O
-brew "yazi"
-# Pluggable terminal workspace, with terminal multiplexer as the base feature
-brew "zellij"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
-# Open links in any browser
-cask "choosy"
 # Virtual monitor for screen sharing
 cask "deskpad"
 # Voice and text chat software
@@ -131,12 +119,8 @@ cask "krisp"
 cask "microsoft-edge"
 # Remote desktop client
 cask "microsoft-remote-desktop"
-# Online collaborative whiteboard platform
-cask "miro"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# Open-source code editor
-cask "visual-studio-code"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm@nightly"
 vscode "astro-build.astro-vscode"
@@ -197,3 +181,6 @@ npm "@openai/codex"
 npm "corepack"
 npm "typescript-language-server"
 npm "typescript"
+
+# Code editor
+cask "zed"
