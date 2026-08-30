@@ -14,4 +14,4 @@
         gr = grep
         cp = cherry-pick
 [ghq]
-        root = ~/dev/github
+        root = ~/dev
