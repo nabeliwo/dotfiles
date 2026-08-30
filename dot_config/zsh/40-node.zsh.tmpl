@@ -7,6 +7,9 @@ case ":$PATH:" in
 esac
 
 {{- if eq .chezmoi.os "darwin" }}
-# Cloudflare WARP の証明書を Node.js アプリケーションが使用するための設定
-export NODE_EXTRA_CA_CERTS="$HOME/cloudflare.pem"
+# Cloudflare WARP の証明書を Node.js に信頼させる（証明書が存在する時だけ設定）
+# WARP 未導入のマシンで NODE_EXTRA_CA_CERTS の load failed 警告が出るのを防ぐ
+if [[ -f "$HOME/cloudflare.pem" ]]; then
+  export NODE_EXTRA_CA_CERTS="$HOME/cloudflare.pem"
+fi
 {{- end }}
