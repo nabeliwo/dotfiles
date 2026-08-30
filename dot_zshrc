@@ -1,10 +1,5 @@
 # ~/.zshrc
 
-# mise (インタラクティブシェルでのみ有効化)
-if command -v mise >/dev/null 2>&1; then
-  eval "$(mise activate zsh)"
-fi
-
 for f in ~/.config/zsh/*.zsh; do
   [[ -r "$f" ]] && source "$f"
 done
@@ -16,3 +11,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+
+# mise はインタラクティブシェルで、かつ他の PATH 変更（zinit/pnpm 等）の後に
+# activate する。こうすると mise 管理のツールパスが PATH 先頭に来て最優先になる。
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
