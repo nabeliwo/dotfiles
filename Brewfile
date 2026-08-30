@@ -91,7 +91,7 @@ cask "terraform-linters/tap/tflint"
 cask "raycast"
 
 # OpenAI Codex CLI
-brew "codex"
+cask "codex"
 
 # Google Cloud CLI
 cask "gcloud-cli"
