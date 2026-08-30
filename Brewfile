@@ -86,3 +86,6 @@ cask "zed"
 
 # Terraform linter (core から tap へ移設・現在は cask)
 cask "terraform-linters/tap/tflint"
+
+# Launcher
+cask "raycast"
