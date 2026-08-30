@@ -1,5 +1,4 @@
-tap "homebrew/bundle"
-tap "homebrew/services"
+tap "terraform-linters/tap"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Cryptography and SSL/TLS Toolkit
@@ -52,8 +51,6 @@ brew "ripgrep"
 brew "starship"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
-# Linter for Terraform files
-brew "tflint"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
@@ -86,3 +83,6 @@ cask "obsidian"
 
 # Code editor
 cask "zed"
+
+# Terraform linter (core から tap へ移設・現在は cask)
+cask "terraform-linters/tap/tflint"
