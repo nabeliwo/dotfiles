@@ -98,3 +98,7 @@ cask "gcloud-cli"
 
 # Task management
 cask "ticktick"
+
+# Image processing (Ruby gems: ruby-vips → vips, mini_magick → imagemagick)
+brew "vips"
+brew "imagemagick"
