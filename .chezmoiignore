@@ -1,6 +1,9 @@
 README.md
 .config/zsh/80-secrets.zsh
 
+{{- /* Zed のプロンプトDB(LMDB)はランタイム状態なので管理しない */}}
+.config/zed/prompts
+
 {{- /* macOS 専用ファイルは darwin 以外（WSL/Linux）では適用しない */}}
 {{ if ne .chezmoi.os "darwin" }}
 Brewfile
