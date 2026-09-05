@@ -95,3 +95,6 @@ cask "codex"
 
 # Google Cloud CLI
 cask "gcloud-cli"
+
+# Task management
+cask "ticktick"
