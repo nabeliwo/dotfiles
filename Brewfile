@@ -102,3 +102,6 @@ cask "ticktick"
 # Image processing (Ruby gems: ruby-vips → vips, mini_magick → imagemagick)
 brew "vips"
 brew "imagemagick"
+
+# PostgreSQL client (psql / pg_dump) — keg-only; DB server runs in colima
+brew "libpq"
