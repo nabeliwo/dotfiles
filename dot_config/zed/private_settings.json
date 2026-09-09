@@ -18,4 +18,7 @@
   "auto_install_extensions": {
     "ruby": true,
   },
+  "hard_tabs": false,
+  "tab_size": 2,
+  "show_whitespaces": "boundary",
 }
