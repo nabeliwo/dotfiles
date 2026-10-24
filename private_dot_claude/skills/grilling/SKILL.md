@@ -1,10 +1,24 @@
 ---
 name: grilling
-description: Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases.
+description: 計画・設計・仕様について一問ずつ質問を重ね、決めるべきことを決めきる。実装前に計画を叩きたいとき、「grill して」「詰めて」「壁打ちして」「ツッコミ入れて」「この設計の穴を探して」のような依頼で発動する。一回きりのレビューコメントが欲しいだけなら使わない。
 ---
 
-Interview me relentlessly about every aspect of this plan until we reach a shared understanding. Walk down each branch of the design tree, resolving dependencies between decisions one-by-one. For each question, provide your recommended answer.
+# grilling
 
-Ask the questions one at a time, waiting for feedback on each question before continuing. Asking multiple questions at once is bewildering.
+計画について、ユーザーと認識が揃うまで質問を続ける。
 
-If a question can be answered by exploring the codebase, explore the codebase instead.
+## 始める前に
+- 何の計画を叩くのか（チャット内の計画、ファイル、チケットなど）がはっきりしなければ、まずそれを確認する。
+- 計画を読み、決めるべき論点を洗い出してツリーにする。依存関係がある論点は上流から並べ、後から覆すと手戻りが大きいもの（データモデル、公開 API、スコープなど）を先に扱う。
+
+## 質問のしかた
+- 1回に1問だけ聞き、回答を待ってから次に進む。まとめて聞くと答えにくい。
+- 毎回、推奨回答と理由（何とのトレードオフか）を添える。
+- 選択肢がはっきりしている問いは AskUserQuestion を使い、推奨案を先頭に置く。答えの幅が広い問いは文章で聞く。選択肢に考えを引っぱられないよう、前提を疑う必要がある問いも文章で聞く。
+- コードベースを調べればわかることは聞かずに調べ、わかったことを一言伝える。
+- 回答から新しい論点が出たらツリーに加える。前に決めたことと矛盾したら指摘する。
+- ときどき残りの論点の数を伝える。
+
+## 終わり方
+- 論点が尽きたとき、またはユーザーが切り上げたいと言ったときに終える。
+- 最後に「決まったこと / 保留にしたこと / 次にやること」を短くまとめる。置き場所はその場で判断する。叩いた計画がファイルなら、そこへの追記を提案する。チャット内の計画ならチャットに出す。
