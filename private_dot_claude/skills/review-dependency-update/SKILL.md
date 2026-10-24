@@ -88,7 +88,20 @@ semver の番号だけで影響の大きさを決めない。0.x のパッケー
 
 ## 6. コンフリクトの解消
 
-`mergeable` が `CONFLICTING` なら、確認せずに解消して push してよい（ユーザーの指示）。`UNKNOWN` のときは GitHub の計算待ちなので、少し時間を置いて取り直す。
+`mergeable` が `CONFLICTING` なら、確認せずに解消してよい（ユーザーの指示）。`UNKNOWN` のときは GitHub の計算待ちなので、少し時間を置いて取り直す。
+
+### まず bot に作り直させる
+
+人がコミットを足すと bot がその PR を自動で更新しなくなるので、先に bot 自身に作り直させる。
+
+- **Renovate**: PR 本文の `- [ ] <!-- rebase-check -->` を `- [x] <!-- rebase-check -->` に書き換える（`gh pr view <PR> --json body -q .body` で取得し、置換して `gh pr edit <PR> --body-file <file>`）。本文のほかの部分は変えない。
+- **Dependabot**: `@dependabot rebase` とだけ書いたコメントを `gh pr comment` で投稿する。
+
+そのあと 10 分ほど、head のコミット（`gh pr view <PR> --json headRefOid`）が変わって `MERGEABLE` になるかを見る。待つときは Monitor などで条件が満たされるまで待ち、短い間隔で何度も問い合わせない。
+
+Renovate はチェックボックスに反応しないことがある。反応しなければ、原因は Mend の job log（PR 本文末尾のリンク）でわかるかもしれないと報告に添えて、手で解消する。
+
+### 手で解消する
 
 作業はユーザーが今いるブランチを汚さないよう、scratchpad に worktree を切って行う。
 
@@ -108,7 +121,7 @@ git merge origin/<base> --no-edit
 - 解消したら `git diff origin/<base>` を見て、**この PR が意図した更新以外の差分が出ていない**ことを確かめてからコミットする。
 - push したら `gh pr view <PR> --json mergeable` で `MERGEABLE` になったことを確かめ、worktree とローカルブランチを片付ける。
 
-報告では、人がコミットを足したので bot がこの PR を自動で rebase / 更新しなくなることを伝える。Renovate も Dependabot も同じ。
+手で解消したときは、人がコミットを足したので bot がこの PR を自動で rebase / 更新しなくなることを報告で伝える。Renovate も Dependabot も同じ。
 
 push すると CI が走り直すので、7 は push の後に行う。
 
@@ -168,6 +181,6 @@ approve してよい場合でも、マージのルールに引っかからない
 
 ### やらないこと
 
-- approve、merge、PR へのコメントの投稿（ユーザーから頼まれたら行う）
+- approve、merge、PR へのレビューコメントの投稿（ユーザーから頼まれたら行う。6 の bot への rebase 依頼は除く）
 - 修正のコミット（コンフリクト解消のマージコミットは除く）
 - bot の設定（`renovate.json` など）の変更
